@@ -79,7 +79,7 @@
 от 0 до N-1E а значение поля заменяется номером промежуткаE которому оно принадлежит*
 
 ### Использованные библиотеки
-Pandas NumPy Matplotliib Imbalanced-learn CatBoost XGBoost  LightGBM PySpark Plotly Shap
+Pandas NumPy Matplotliib Imbalanced-learn CatBoost XGBoost  LightGBM PySpark Plotly Shap Optuna
 
 ## Выводы
 
