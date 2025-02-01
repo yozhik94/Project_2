@@ -81,7 +81,7 @@
 ### Использованные библиотеки
 Pandas NumPy Matplotliib Imbalanced-learn CatBoost PySpark Plotly Shap
 
-### Выводы
+## Выводы
 
 Проведен анализ данных и также предобработка данных, в ходе которой кодированны категориальные признаки.
 
@@ -108,6 +108,21 @@ Pandas NumPy Matplotliib Imbalanced-learn CatBoost PySpark Plotly Shap
 |   |3442|6183|   |225  |9400 |
 |   |FP(класс 1)|TP(класс 1)|   |FP(класс 1)|TP(класс 1)|
 
+| Модель  | ROC-AUC  |
+|---|---|
+| undersampling  | 0.750538 |
+| без undersampling  | 0.906394  |
+
+Приимущества undersampling подтверждено при ограниченнии в вычеслительных рексурсах. 
+
+Главное приимущества: 1. Модель InstanceHardnessThreshold (https://imbalanced-learn.org/stable/references/generated/imblearn.under_sampling.InstanceHardnessThreshold.html)
+совместно с HistGradientBoostingClassifier(модель градиентного бустинга) очистила данные мажорного класса от значений имеющих низкую вероятность. 
+
+Это подтвержденно тем, что в основной модели эти значения находятся в ложноположительных(FP) и ложноотрецательных значениях(FN). 
+
+Данный метод позволил увеличить точность предсказания клиентов с дефолтом по кредиту. 
+
+Ссылка на статью успешного применения метода undersampling с InstanceHardnessThreshold - https://jurnal.ugm.ac.id/ijitee/article/view/42152
 
 
 
